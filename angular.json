@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d3bdb12f-fdc3-44ab-9281-0e9b93673808"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "New": {
+    "third-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -12,12 +15,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "utn",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/New",
+            "outputPath": "dist/third-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "New:build:production"
+              "browserTarget": "third-project:build:production"
             },
             "development": {
-              "browserTarget": "New:build:development"
+              "browserTarget": "third-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "New:build"
+            "browserTarget": "third-project:build"
           }
         },
         "test": {
@@ -102,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "New"
+  "defaultProject": "third-project"
 }
